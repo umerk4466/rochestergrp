@@ -1,0 +1,764 @@
+/*
+Theme Name: Rochester Group
+Author: Umer Akhtar
+Author URI: https://github.com/umerk4466/
+Description: Custom theme built for Rocherter group (rochestergrp.co.uk).
+Version: 1.0
+*/
+
+
+/*
+ * Globals
+ */
+
+html,
+body {
+    font-family: "Roboto", "Times New Roman", "Times", "serif";
+    min-height: 100%;
+    background-color: white;
+}
+
+
+/* RESPONSIVENESS */
+
+
+/* On Small devices  */
+
+@media (max-width: 544px) {
+    body,
+    .btn {
+        font-size: 13px !important;
+    }
+    .footers {
+        font-size: 90% !important;
+    }
+    .more-vehicles-titles {
+        display: contents !important;
+        /* text-align: center; */
+    }
+    .carousel-img {
+        border-radius: 0px !important;
+    }
+}
+
+
+/* Untill medium devices */
+
+@media (max-width: 768px) {
+    .navbar {
+        background: #3acbbd;
+        box-shadow: inset 0 0 25rem black;
+    }
+    .footers h5 {
+        display: none;
+    }
+    .specific-car-section {
+        padding-top: 4rem !important;
+    }
+}
+
+
+/* On medium devices */
+
+@media (min-width: 768px) {
+    body,
+    .btn {
+        font-size: 14px !important;
+    }
+}
+
+
+/* On Large devices */
+
+@media (min-width: 992px) {
+    body,
+    .btn {
+        font-size: 15px !important;
+    }
+}
+
+
+/* On Extra large devices */
+
+@media (min-width: 1200px) {
+    body,
+    .btn {
+        font-size: 16px !important;
+    }
+}
+
+
+/*
+  * Header
+  */
+
+.nav-link {
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.nav-link:hover {
+    color: #3acbbd;
+}
+
+.nav-masthead .active {
+    /* border-top: 0.09rem solid #3acbbd; */
+    /* border-bottom: 0.09rem solid #3acbbd; */
+    font-weight: bold;
+}
+
+
+/* menu button */
+
+.menu-bar {
+    background: url("./assets/images/menu.png");
+    height: 20px;
+    width: 20px;
+    display: block;
+}
+
+.menu-close {
+    background: url("./assets/images/close-menu.png");
+    height: 20px;
+    width: 20px;
+    display: block;
+}
+
+#menu-btn {
+    outline: none !important;
+    box-shadow: none;
+}
+
+
+/*
+  * main_container
+  */
+
+.main-container {
+    min-height: 100vh;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: inset 0 0 25rem black;
+    background: url("./assets/images/background.png") center no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+}
+
+.navbar-color {
+    background: #3acbbd;
+    box-shadow: inset 0 0 25rem black;
+    transition: background 1.5s linear;
+    /* border-bottom-style: solid;
+     border-bottom-color: black;
+     border-bottom-width: 1px; */
+}
+
+
+/* page loader gif */
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url("./assets/images/loader.gif") 50% 50% no-repeat rgb(249, 249, 249);
+}
+
+
+/* custom button */
+
+.white-custom-button {
+    padding: 10px;
+    border: 1.4px solid white;
+    color: white;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+.white-custom-button:hover {
+    background-color: #3acbbd;
+    color: white;
+    border-color: #3acbbd;
+}
+
+.black-custom-button {
+    padding: 10px;
+    border: 1.4px solid black;
+    color: black;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+.black-custom-button:hover {
+    background-color: #3acbbd;
+    color: black;
+    border-color: #3acbbd;
+}
+
+.custom-button:focus,
+.custom-button:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.heading-size {
+    font-size: 1.8em;
+}
+
+.sub-heading-size {
+    font-size: 1.3em;
+}
+
+.white {
+    color: white;
+}
+
+.heading-font {
+    font-family: "Spectral";
+}
+
+.heading-bottom {
+    font-size: 1.3em;
+    margin: 0 auto;
+    border-right: 2px solid #3acbbd;
+    white-space: nowrap;
+    overflow: hidden;
+    color: white;
+}
+
+.page-bg-color {
+    background-color: #0e322f;
+}
+
+.right-line {
+    border-right: 1px solid rgb(170, 170, 170);
+}
+
+.top-line {
+    border-top: 1px solid rgb(170, 170, 170);
+}
+
+.bottom-line {
+    border-bottom: 1px solid rgb(170, 170, 170);
+}
+
+.custom-card-a,
+.custom-card-a:hover {
+    color: inherit;
+}
+
+.card {
+    border-radius: 4px;
+    display: inline-block;
+    width: 17rem;
+    border: 0 !important;
+}
+
+
+/* .card:hover {
+     -webkit-box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 1);
+     -moz-box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 1);
+     box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 1);
+ } */
+
+.card img {
+    height: 13rem;
+}
+
+.card .h6 {
+    height: 1em;
+    line-height: 1em;
+    overflow: hidden;
+}
+
+.review-box {
+    padding-right: 1.8rem;
+    padding-left: 1.8rem;
+    padding-bottom: 1.8rem;
+    min-height: 13rem;
+    background-color: white;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    max-width: 25rem;
+    -webkit-box-shadow: 0px 1px 20px 0px rgba(50, 50, 50, 0.27);
+    -moz-box-shadow: 0px 1px 20px 0px rgba(50, 50, 50, 0.27);
+    box-shadow: 0px 1px 20px 0px rgba(50, 50, 50, 0.27);
+    border-radius: 4px;
+}
+
+.review-img-box {
+    border-radius: 50%;
+    height: 5rem;
+    max-width: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -2.5rem;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 1);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 1);
+    box-shadow: 0px 0px 4px 0px rgba(50, 50, 50, 1);
+}
+
+.review-img-box img {
+    height: 5rem;
+    width: 5rem;
+}
+
+.customer-review-description {
+    font-style: italic;
+    text-align: center;
+    /* line-height: 1.2rem; */
+}
+
+
+/* typewriter Animation affect */
+
+.typewriter {
+    animation: typewriter 4s steps(30) 1s 1 normal both, blinkTextCursor 500ms steps(30) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 13.5em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: #3acbbd;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+
+/* Footer  */
+
+.footers {
+    background-color: #0e322f;
+    color: white;
+}
+
+.footers a {
+    text-decoration: none;
+    color: #6c757d;
+}
+
+.footers a:hover {
+    color: #3acbbd;
+    transition: all 0.5s;
+}
+
+.footers p {
+    color: #6c757d;
+}
+
+.footers ul {
+    line-height: 30px;
+}
+
+.social-link {
+    padding-right: 15px;
+}
+
+.social-link:hover {
+    color: #3acbbd;
+    transition: all 0.001s;
+}
+
+
+/* about us page */
+
+.about-banner {
+    height: 17rem;
+    background: linear-gradient( 0deg, rgba(14, 50, 47, 0.8), rgba(14, 50, 47, 0.8)), url("./assets/images/about-us-banner.png") center no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+}
+
+.core-val-box-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.core-val-box {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    max-height: 23rem;
+    background-color: white;
+    max-width: 18rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 4rem;
+    border-radius: 2px;
+}
+
+.core-val-icon-box {
+    border-radius: 50%;
+    height: 5rem;
+    max-width: 5rem;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -2.5rem;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.75);
+    font-size: 2.3em;
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.our-team {
+    margin-top: 72px;
+    margin-bottom: 3rem;
+}
+
+.our-team .pic {
+    width: 40%;
+    border-radius: 50%;
+    margin: -72px auto 0;
+    overflow: hidden;
+    transition: all 0.2s ease 0s;
+}
+
+.our-team .pic img {
+    width: 100%;
+    height: auto;
+}
+
+.our-team .team-content {
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.our-team .team-title {
+    color: #333;
+    margin: 20px 0 0;
+}
+
+.our-team .post {
+    color: gray;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.our-team .description {
+    margin-bottom: 1em;
+}
+
+.our-team .social-links {
+    padding: 0;
+}
+
+.our-team .social-links li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.our-team .social-links li a {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    color: #0e322f;
+}
+
+.our-team .social-links li a:hover {
+    text-decoration: none;
+    color: #3acbbd;
+}
+
+
+/* contact us page */
+
+.contact-us-banner {
+    height: 17rem;
+    background: linear-gradient( 0deg, rgba(14, 50, 47, 0.8), rgba(14, 50, 47, 0.8)), url("./assets/images/contact-us-banner.png") center no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+}
+
+.custom-icons-box {
+    padding: 15px;
+}
+
+.custom-icons-box a {
+    color: #0e322f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.custom-icons-box a:hover {
+    color: #3acbbd;
+}
+
+.icon-box {
+    font-size: 4.5em;
+    color: #0e322f;
+    margin-bottom: 0.5rem;
+}
+
+.icon-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.3rem;
+}
+
+.custom-svg {
+    margin-top: -15%;
+}
+
+
+/* contact form */
+
+.contact-form {
+    margin: 0;
+}
+
+.contact-form-input {
+    background: #ffffff;
+    border: 0.1px solid #5a585b;
+    box-sizing: border-box;
+    border-radius: 35px;
+    margin: 0.5rem 0;
+    color: #676767;
+    padding: 0.2rem 1.1rem;
+    width: 80%;
+    height: 2.8rem;
+}
+
+.contact-form-textarea {
+    background: #ffffff;
+    border: 0.1px solid #5a585b;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    color: #676767;
+    padding: 0.6rem 0.9em;
+    width: 80%;
+}
+
+.contact-form-button {
+    background: #3acbbd;
+    border: 0.1px solid #5a585b;
+    box-sizing: border-box;
+    border-radius: 35px;
+    width: 80%;
+    height: 2.8rem;
+    margin: 0.5rem 0;
+    color: white;
+}
+
+
+/* Vehicles stock pages styles */
+
+.vehicles-stock-banner {
+    height: 17rem;
+    background: linear-gradient( 0deg, rgba(14, 50, 47, 0.8), rgba(14, 50, 47, 0.8)), url("./assets/images/vehicles-stock-banner.png") center no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+}
+
+
+/* Vehicle stock page style  */
+
+#tabs .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    background-color: transparent;
+    border-bottom: 4px solid !important;
+    font-weight: bold;
+}
+
+#tabs .nav-tabs .nav-link {
+    color: #0e322f;
+    font-size: 110%;
+}
+
+#tabs .nav-tabs .nav-link {
+    border: none;
+    margin: 0;
+}
+
+.vehicles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.car-box {
+    display: flex;
+    color: black;
+    margin-bottom: 15px;
+    padding: 10px;
+    max-height: 11rem;
+    overflow: auto;
+}
+
+.car-box:hover {
+    color: inherit;
+    text-decoration: none;
+    background-color: #f5f5f5;
+}
+
+.car-thumbnail {
+    max-width: 35%;
+    padding-right: 0.7rem;
+}
+
+.car-thumbnail img {
+    border-radius: 2px;
+}
+
+
+/* specific car page style */
+
+.specific-car-banner {
+    height: 14rem;
+    background: #0e322f;
+}
+
+.specific-car-section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+
+/* .carousel-item {
+     height: 24rem;
+ } */
+
+.carousel-img {
+    width: 100% !important;
+    /* height: 100% !important; */
+    display: block !important;
+    border-radius: 4px;
+}
+
+.car-slider-btn {
+    padding: 0.5rem;
+    background-color: #0e322f;
+    font-size: 1.6em;
+}
+
+.vehicle-overview-item {
+    /* min-width: 7rem; */
+    padding: 5px;
+    flex-basis: 33%;
+}
+
+.more-vehicles-titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.svg-size {
+    height: 28px;
+    width: 30px;
+}
+
+.more-vehicles-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+}
+
+.email-us-directly,
+.email-us-directly:hover {
+    border-top: 1px solid slategray;
+    border-bottom: 1px solid slategray;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+    color: #0e322f;
+    text-decoration: none;
+}
+
+
+/* WORDPRES FORM 7 CSS STYLES */
+
+span .wpcf7-not-valid {
+    border: 1.5px solid #ff0000 !important;
+}
+
+span.wpcf7-not-valid-tip {
+    display: none;
+}
+
+div.wpcf7-validation-errors {
+    background: #ffe2e2;
+    border: 1px solid #ff0000;
+    color: #c10000;
+}
+
+div.wpcf7-response-output {
+    margin: 2em 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+div.wpcf7-validation-errors {
+    display: none !important;
+}
+
+.wpcf7-spam-blocked {
+    background: #e2e2e2;
+    border: 1px solid #bcbcbc !important;
+    color: #383838;
+}
+
+.wpcf7-mail-sent-ng {
+    background: #fcf8e3;
+    border: 1px solid #ac9163 !important;
+    color: #8a6d3b;
+}
+
+.wpcf7-mail-sent-ok {
+    background: #dff0d8;
+    border: 1px solid #3c763d !important;
+    color: #3c763d;
+}
+
+.wpcf7-response-output {
+    background-color: white;
+}
+
+
+/* END WORDPRES FORM 7 CSS STYLES */

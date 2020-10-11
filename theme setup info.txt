@@ -1,0 +1,22 @@
+- Remove default pages and post.
+- add custom theme.
+- Add empty Pages with the name (about us, contact us, vehicles stock)
+- Install "dynamic_featured_image" plugn.
+- Install contact form 7 plugin
+	- set up form with given fields and classes:
+		[text full-name class:contact-form-input placeholder "Your Name"]
+		[email* email class:contact-form-input placeholder "Your Email"]
+		[tel* phone-number class:contact-form-input placeholder "Phone Number"]
+		[textarea* message class:contact-form-textarea placeholder "Your question or message..."]
+		[submit class:contact-form-button "Send Message"]
+	- set the mailing message and email for sending messages.
+	- copy the form's shortcode and past in the page-contact-form.php like bewlow:
+		<?php
+                echo do_shortcode(
+                    '[contact-form-7 id="19" title="Contact form 1"]'
+                );
+                ?>
+- Add vehicles from "vehicle post"
+	-   custom fields while posting a vehicles = (mileage, reg_year, make(only can be mercedes, land rover, bmw, jeep), engine_size, gearbox_type, engine_consumption_type, doors, seats, place, price, rrp_price, saving, sub_heading)
+	-   also add thumbnail and featured images on the side ans publish post.
+

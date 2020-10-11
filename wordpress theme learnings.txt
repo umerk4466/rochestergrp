@@ -1,0 +1,99 @@
+// learninig link
+https://www.youtube.com/watch?v=cekqIL7iivo&list=PLT9miexWCpPV9WxY_QG3qxUGKzw54LboW&index=15
+
+//how to get cutom post data to the template snippet:
+<?php
+query_posts(array(
+  'post_type' => 'sold_or_exported',
+  'showposts' => 10
+));
+?>
+<?php while (have_posts()) : the_post();
+  $millage = get_post_meta(get_the_ID(), 'millage', true);
+?>
+  <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?> asj</a></h2>
+  <div class="container"><?php the_content(); ?> </div>
+  <h2><?php echo $millage; ?></h2>
+?>
+<?php endwhile; ?>
+
+// how to make cutom post:
+function cw_post_type_sold_or_exported()
+{
+  $supports = array(
+    'title', // post title
+    'editor', // post content
+    // 'author', // post author
+    'thumbnail', // featured images
+    // 'excerpt', // post excerpt
+    'custom-fields', // custom fields
+    // 'comments', // post comments
+    // 'revisions', // post revisions
+    // 'post-formats', // post formats
+  );
+  $labels = array(
+    'name' => _x('Sold or exported', 'plural'),
+    'singular_name' => _x('Sold or exported', 'singular'),
+    'menu_name' => _x('Sold or exported', 'admin menu'),
+    'name_admin_bar' => _x('Sold or exported', 'admin bar'),
+    'add_new' => _x('Add New', 'add new'),
+    'add_new_item' => __('Add New Sold or exported'),
+    'new_item' => __('New'),
+    'edit_item' => __('Edit'),
+    'view_item' => __('View'),
+    'all_items' => __('All Sold or exported'),
+    'search_items' => __('Search Sold or exported'),
+    'not_found' => __('Not found Sold or exported.'),
+  );
+  $args = array(
+    'supports' => $supports,
+    'labels' => $labels,
+    'public' => true,
+    'query_var' => true,
+    'rewrite' => array('slug' => 'sold_or_exported'),
+    'has_archive' => true,
+    'hierarchical' => false,
+  );
+  register_post_type('sold_or_exported', $args);
+}
+add_action('init', 'cw_post_type_sold_or_exported');
+/*Custom Post type end*/
+
+// how to get post by custo field name and value:
+			<?php
+                        // get all the vehicles of bmw make
+                        query_posts(array(
+                            'post_type' => 'vehicle',
+                            'meta_key'  => 'make',
+                            'meta_value' => 'bmw',
+                        ));
+                        if (have_posts()) : while (have_posts()) : the_post(); ?>
+                                <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+                                <div class="container"><?php the_content(); ?> </div>
+                            <?php endwhile; ?>
+                        <?php else : ?>
+                            Display "Posts not found" message here
+                        <?php endif; ?>
+
+
+// how to get custom field data:
+				$mileage = get_post_meta(get_the_ID(), 'mileage', true);
+                                $reg_year = get_post_meta(get_the_ID(), 'reg_year', true);
+                                $make = get_post_meta(get_the_ID(), 'make', true);
+                                $engine_size = get_post_meta(get_the_ID(), 'engine_size', true);
+                                $gearbox_type = get_post_meta(get_the_ID(), 'gearbox_type', true);
+                                $engine_consumption_type = get_post_meta(get_the_ID(), 'engine_consumption_type', true);
+                                $doors = get_post_meta(get_the_ID(), 'doors', true);
+                                $seats = get_post_meta(get_the_ID(), 'seats', true);
+                                $place = get_post_meta(get_the_ID(), 'place', true);
+                                $price = get_post_meta(get_the_ID(), 'price', true);
+                                $rrp_price = get_post_meta(get_the_ID(), 'rrp_price', true);
+                                $saving = get_post_meta(get_the_ID(), 'saving', true);
+                                $sub_heading = get_post_meta(get_the_ID(), 'sub_heading', true); 
+
+// how to get muliple featured images of the post after installing dynamic_featured_image plugin
+				<?php
+                                foreach ($dynamic_featured_image->get_featured_images([get_the_ID()]) as $images) {
+                                    echo $images["thumb"];
+                                }
+                                ?>
